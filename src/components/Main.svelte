@@ -103,7 +103,7 @@
   }
   /** LOAD ASSETS METHODS END */
 
-  /* {{{ Zea Cloud Cliend. */
+  /* {{{ Zea Cloud Client. */
   $: if ($zeaCloudClient) {
     const organizationId = urlParams.get('organization-id')
     const projectId = urlParams.get('project-id')
@@ -125,7 +125,7 @@
       })
     })
   }
-  /* }}} Zea Cloud Cliend. */
+  /* }}} Zea Cloud Client. */
 
   onMount(async () => {
     renderer = new GLRenderer(canvas)
