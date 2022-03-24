@@ -1,7 +1,7 @@
 import { APP_DATA } from '../stores/appData'
 import { get } from 'svelte/store'
 
-import { GeomItem, Mesh, MeshProxy, Lines, LinesProxy, Color, PMIItem, CADAsset } from '@zeainc/zea-engine'
+import { GeomItem, Mesh, MeshProxy, Lines, LinesProxy, Color, PMIItem, CADAsset, SystemDesc } from '@zeainc/zea-engine'
 
 // ////////////////////////////////////////
 // Render Modes
@@ -84,8 +84,14 @@ const handleChangeRenderModeFlatWhite = (pub = true) => {
   }
   mode = RENDER_MODES.FLAT_WHITE
   const { assets, scene, renderer, session } = get(APP_DATA)
-  renderer.outlineThickness = 1
-  renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+
+  const { isMobileDevice } = SystemDesc
+
+  if (!isMobileDevice) {
+    renderer.outlineThickness = 1
+    renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  }
+
   const backgroundColor = renderer.getViewport().backgroundColorParam.value
 
   const processed = {}
@@ -125,8 +131,12 @@ const handleChangeRenderModeFlat = () => {
 
   const { assets, scene, renderer } = get(APP_DATA)
 
-  renderer.outlineThickness = 1
-  renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  const { isMobileDevice } = SystemDesc
+
+  if (!isMobileDevice) {
+    renderer.outlineThickness = 1
+    renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  }
 
   const processed = {}
   const modifyMaterial = (material) => {
@@ -165,8 +175,12 @@ const handleChangeRenderModeHiddenLine = () => {
 
   const { assets, renderer } = get(APP_DATA)
 
-  renderer.outlineThickness = 1
-  renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  const { isMobileDevice } = SystemDesc
+
+  if (!isMobileDevice) {
+    renderer.outlineThickness = 1
+    renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  }
 
   const processed = {}
   const modifyMaterial = (material) => {
@@ -204,8 +218,12 @@ const handleChangeRenderModeShadedAndEdges = () => {
 
   const { assets, renderer } = get(APP_DATA)
 
-  renderer.outlineThickness = 1
-  renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  const { isMobileDevice } = SystemDesc
+
+  if (!isMobileDevice) {
+    renderer.outlineThickness = 1
+    renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  }
 
   assets.traverse((item) => {
     if (item instanceof PMIItem) return false
@@ -248,8 +266,12 @@ const handleChangeRenderModePBR = () => {
   }
   const { assets, renderer } = get(APP_DATA)
 
-  renderer.outlineThickness = 1
-  renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  const { isMobileDevice } = SystemDesc
+
+  if (!isMobileDevice) {
+    renderer.outlineThickness = 1
+    renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+  }
 
   const processed = {}
   const modifyMaterial = (material) => {
