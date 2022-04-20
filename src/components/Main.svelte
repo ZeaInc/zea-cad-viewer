@@ -136,6 +136,7 @@
       renderer.outlineThickness = 0.5
       renderer.outlineSensitivity = 5
       renderer.outlineColor = new Color(0.2, 0.2, 0.2, 1)
+      renderer.hiddenLineColor = new Color(0.2, 0.2, 0.2, 0.0)
     }
 
     // $scene.setupGrid(10, 10)
