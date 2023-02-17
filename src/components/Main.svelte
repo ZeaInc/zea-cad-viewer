@@ -34,6 +34,7 @@
     AssetLoadContext,
     CADAsset,
     PMIItem,
+    XRef,
   } from '@zeainc/zea-engine'
   import { SelectionManager, UndoRedoManager, ToolManager, SelectionTool } from '@zeainc/zea-ux'
 
@@ -67,6 +68,11 @@
     const context = new AssetLoadContext()
     context.resources = resources
     context.camera = renderer.getViewport().getCamera()
+
+    const baseUrl = url.split('/').slice(0, -1).join('/')
+    context.xrefLoadCallback = (path, xref) => {
+      return baseUrl + '/' + path + '.zcad'
+    }
     asset.load(url, context).then(() => {
       console.log('Loading CAD File version:', asset.cadfileVersion, ' exported using SDK:', asset.sdk)
       const materiaLibrary = asset.getMaterialLibrary()
