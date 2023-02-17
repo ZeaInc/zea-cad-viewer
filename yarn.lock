@@ -378,17 +378,17 @@
     fast-png "^6.1.0"
     jpeg-js "^0.4.3"
 
-"@zeainc/zea-engine@4.4.0-6360602":
-  version "4.4.0-6360602"
-  resolved "https://registry.yarnpkg.com/@zeainc/zea-engine/-/zea-engine-4.4.0-6360602.tgz#6732b98a6ad2f7a97c442e542078a8e33dcc3b2b"
-  integrity sha512-t/NgtD5pq1SZGkAAHO5P0rZmxe7/bwatEe5t+su6p5Z/2fBTn9Un1GdHqBkQqrKH3kTvjq84TudHc8ep9Es7dA==
+"@zeainc/zea-engine@4.6.0-4ffa5a8":
+  version "4.6.0-4ffa5a8"
+  resolved "https://registry.yarnpkg.com/@zeainc/zea-engine/-/zea-engine-4.6.0-4ffa5a8.tgz#96082a9a3e5577addf5ffbcf701629f89ba37808"
+  integrity sha512-PDbEMGGQ6sqO/HPLWBBTesCIC0idoG91i0lnulhZCTwK3lOKD55qssZ3Qw1MRYgbIBlUm8gYxCLbU2bxcf6K5Q==
   dependencies:
     lodash-es "^4.17.21"
 
-"@zeainc/zea-ux@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/@zeainc/zea-ux/-/zea-ux-4.1.0.tgz"
-  integrity sha512-giQbN2TwMW41ZKQhrohxfCixYIjKhjwKld7phBIOPYNusEZqBJDqfSGAU2GROrOMY0IwZquEyPmVvGx/bj3BIA==
+"@zeainc/zea-ux@4.4.0-932c3f9":
+  version "4.4.0-932c3f9"
+  resolved "https://registry.yarnpkg.com/@zeainc/zea-ux/-/zea-ux-4.4.0-932c3f9.tgz#fbd2a3b33e39a8fdc335963fecbcfa91e63c6b4e"
+  integrity sha512-jXhrkELe8QJl+nJzimWnRKHvsuzLPQwinAyOZLEIeODtnvuGqxUyET8QikiFi/+VR64Fsuj0MpM/wbdE/AHhLw==
   dependencies:
     dom-to-image "^2.6.0"
 
