@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "@zeainc/gltf-loader": "^4.0.5",
-    "@zeainc/zea-engine": "4.6.0-4ffa5a8",
-    "@zeainc/zea-ux": "4.4.0-932c3f9"
+    "@zeainc/zea-engine": "4.8.0-dad67db",
+    "@zeainc/zea-ux": "4.4.0-133803e"
   },
   "devDependencies": {
     "@auth0/auth0-spa-js": "^1.6.5",
