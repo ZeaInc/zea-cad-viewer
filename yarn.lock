@@ -378,9 +378,9 @@
     fast-png "^6.1.0"
     jpeg-js "^0.4.3"
 
-"@zeainc/zea-engine@4.8.0-dad67db":
-  version "4.8.0-dad67db"
-  resolved "https://registry.yarnpkg.com/@zeainc/zea-engine/-/zea-engine-4.8.0-dad67db.tgz#33abd1b7b0290fcccbb579bb72d4bc2b2c381dc3"
+"@zeainc/zea-engine@4.8.0-1513b0f":
+  version "4.8.0-1513b0f"
+  resolved "https://registry.yarnpkg.com/@zeainc/zea-engine/-/zea-engine-4.8.0-1513b0f.tgz#33abd1b7b0290fcccbb579bb72d4bc2b2c381dc3"
   integrity sha512-rXkv1h7RlMeMm7q0YaTBHMcwJHkQ5zk62Y/oL9GrwYBbdIs0StPBv5KCwMNRg7zT7CCWQVFPx3L+YOPQSW4sAQ==
   dependencies:
     lodash-es "^4.17.21"
