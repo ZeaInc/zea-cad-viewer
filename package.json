@@ -4,8 +4,8 @@
   "license": "MIT",
   "dependencies": {
     "@zeainc/gltf-loader": "^4.0.5",
-    "@zeainc/zea-engine": "4.8.0-1513b0f",
-    "@zeainc/zea-ux": "4.4.0-133803e"
+    "@zeainc/zea-engine": "4.9.0",
+    "@zeainc/zea-ux": "4.4.1"
   },
   "devDependencies": {
     "@auth0/auth0-spa-js": "^1.6.5",
