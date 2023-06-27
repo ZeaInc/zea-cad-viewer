@@ -1,4 +1,4 @@
-import svelte from 'rollup-plugin-svelte-hot'
+import svelte from 'rollup-plugin-svelte'
 import Hmr from 'rollup-plugin-hot'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
@@ -55,7 +55,6 @@ export default {
       dev: !production, // run-time checks
       // Extract component CSS — better performance
       css: (css) => css.write(`bundle.css`),
-      hot: isNollup,
       preprocess: [
         autoPreprocess({
           postcss: require('./postcss.config.js'),
