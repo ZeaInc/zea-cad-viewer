@@ -54,6 +54,7 @@
     "to-cleanup": "rm -Rf .routify/ dist/ node_modules/",
     "validate": "svelte-check"
   },
+  "packageManager": "yarn@1.22.19",
   "routify": {
     "extensions": "svelte,html,svx,md"
   },
