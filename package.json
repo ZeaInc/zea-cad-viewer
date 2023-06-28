@@ -4,7 +4,7 @@
   "license": "MIT",
   "dependencies": {
     "@zeainc/gltf-loader": "^4.0.5",
-    "@zeainc/zea-engine": "4.9.0",
+    "@zeainc/zea-engine": "4.9.0-b37f79b",
     "@zeainc/zea-ux": "4.4.1"
   },
   "devDependencies": {
