@@ -239,7 +239,9 @@
         // The menu was opened by the long touch. Prevent any other actions from occuring.
         event.stopPropagation()
       }
+    })
 
+    renderer.getViewport().on('pointerClick', (event) => {
       // Detect a single touch, or a left button click.
       if (
         (event.pointerType == 'touch' && event.touches.length == 0 && event.changedTouches.length == 1) ||
@@ -271,8 +273,6 @@
         // Detect a right click
         const item = filterItemSelection(event.intersectionData.geomItem)
         openMenu(event, item)
-        // stop propagation to prevent the camera manipulator from handling the event.
-        event.stopPropagation()
       }
     })
 
@@ -332,7 +332,6 @@
     isMenuVisible = true
   }
   const closeMenu = () => {
-    console.log('closeMenu:')
     isMenuVisible = false
   }
   let isDialogOpen = false
