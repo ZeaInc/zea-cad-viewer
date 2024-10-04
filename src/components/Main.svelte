@@ -117,11 +117,8 @@
     const { isMobileDevice } = SystemDesc
 
     renderer = new GLRenderer(canvas, {
-      debugGeomIds: urlParams.has('debugGeomIds'),
       enableFrustumCulling: true,
-      enableOcclusionCulling: false,
-      /* Due to bugs in the mobile support for multi-draw, and the fact , we are */
-      disableMultiDraw: ZeaSystemDesc.OS == 'Android',
+      enableOcclusionCulling: true,
     })
 
     $scene = new Scene()
