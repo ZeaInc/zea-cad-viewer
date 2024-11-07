@@ -89,7 +89,7 @@ const toggleMeasureTool = (index) => {
   console.log('assetItem:', assetItem)
   if (!assetItem) return
 
-  if (assetItem.getEngineDataVersion().compare([3, 9, 1]) >= 0) {
+  if (assetItem.engineDataVersion.compare([3, 9, 1]) >= 0) {
     if (assetItem.url.startsWith('blob')) {
       if (!assetItem.metadataLoaded) {
         pickMetadataFile().then((metaDataUrl) => {
