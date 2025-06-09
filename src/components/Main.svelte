@@ -137,6 +137,11 @@
     renderer.outlineColor = new Color(0, 0, 0, 0.6)
     renderer.hiddenLineColor = new Color(0.2, 0.2, 0.2, 0.0)
 
+    const manipulator = renderer.getViewport().getManipulator()
+    // manipulator.setDefaultManipulationMode('tumbler')
+    manipulator.zoomTowardGeomUnderCursor = true
+    manipulator.orbitAroundCursor = true
+
     $scene.setupGrid(10, 10)
     renderer.getViewport().backgroundColorParam.value = new Color(0.85, 0.85, 0.85, 1)
     renderer.setScene($scene)
