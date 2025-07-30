@@ -8,42 +8,54 @@ import {
   CompoundGeom,
   InstanceItem,
   CADAssembly,
+  CADAsset,
+  XRef,
 } from '@zeainc/zea-engine'
 
 const collectSceneStats = (root) => {
   const sceneStats = {
+    ASSETS: 0,
+    MATERIALS: 0,
+    GEOMS: 0,
     ASSEMBLIES: 0,
     INSTANCE_ITEMS: 0,
+    XREFS: 0,
     PARTS: 0,
     BODIES: 0,
-    GEOMS: 0,
-    TRIANGLES: 0,
-    LINES: 0,
+    GEOMITEMS: 0,
+    DRAWN_TRIANGLES: 0,
+    DRAWN_LINES: 0,
   }
   root.traverse((item) => {
     if (item instanceof PMIItem) {
       return false
     }
-    if (item instanceof CADAssembly) {
+    if (item instanceof CADAsset) {
+      sceneStats.ASSETS++
+      sceneStats.GEOMS += item.geomLibrary.getNumGeoms()
+      sceneStats.MATERIALS += item.materialLibrary.getNumMaterials()
+    } else if (item instanceof CADAssembly) {
       sceneStats.ASSEMBLIES++
     } else if (item instanceof CADPart) {
       sceneStats.PARTS++
     } else if (item instanceof InstanceItem) {
       sceneStats.INSTANCE_ITEMS++
+    } else if (item instanceof XRef) {
+      sceneStats.XREFS++
     } else if (item instanceof GeomItem) {
-      sceneStats.GEOMS++
+      sceneStats.GEOMITEMS++
       if (item instanceof CADBody) {
         sceneStats.BODIES++
       }
       const geom = item.geomParam.value
       if (geom) {
         if (geom instanceof CompoundGeom) {
-          sceneStats.TRIANGLES += geom.getNumTriangles()
-          sceneStats.LINES += geom.getNumLineSegments()
+          sceneStats.DRAWN_TRIANGLES += geom.getNumTriangles()
+          sceneStats.DRAWN_LINES += geom.getNumLineSegments()
         } else if (geom instanceof MeshProxy) {
-          sceneStats.TRIANGLES += geom.getNumTriangles()
+          sceneStats.DRAWN_TRIANGLES += geom.getNumTriangles()
         } else if (geom instanceof LinesProxy) {
-          sceneStats.LINES += geom.getNumLineSegments()
+          sceneStats.DRAWN_LINES += geom.getNumLineSegments()
         }
       }
     }

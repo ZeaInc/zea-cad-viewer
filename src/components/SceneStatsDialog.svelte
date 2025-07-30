@@ -22,14 +22,16 @@
     <section class="p-2">
       <header>Scene Stats</header>
       <main>
-        <pre
-          class="text-gray-100 my-3 py-3">
+        <pre class="text-gray-100 my-3 py-3">
+Assets:{sceneStats.ASSETS}
+Materials:{sceneStats.MATERIALS}
+Geometries:{sceneStats.GEOMS}
 Assemblies:{sceneStats.ASSEMBLIES}
+XRefs:{sceneStats.XREFS}
 Parts:{sceneStats.PARTS}
 Bodies:{sceneStats.BODIES}
-Geometries:{sceneStats.GEOMS}
-Triangles:{sceneStats.TRIANGLES}
-Lines:{sceneStats.LINES}
+Drawn Triangles:{sceneStats.DRAWN_TRIANGLES}
+Drawn Lines:{sceneStats.DRAWN_LINES}
         </pre>
       </main>
       <div class="text-right">
