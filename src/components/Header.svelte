@@ -54,7 +54,12 @@
     switch (key) {
       case 'f':
         if (renderer) {
-          renderer.frameAll()
+          const selection = selectionManager.getSelection()
+          if (selection.size > 0) {
+            renderer.getViewport().frameView(Array.from(selection))
+          } else {
+            renderer.frameAll()
+          }
         }
         break
       case 'z':
