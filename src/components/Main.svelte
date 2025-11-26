@@ -34,7 +34,6 @@
     AssetLoadContext,
     CADAsset,
     PMIItem,
-    XRef,
   } from '@zeainc/zea-engine'
   import { SelectionManager, UndoRedoManager, ToolManager, SelectionTool } from '@zeainc/zea-ux'
 
