@@ -23,6 +23,7 @@
       <header>Scene Stats</header>
       <main>
         <pre class="text-gray-100 my-3 py-3">
+Bounding Box:{sceneStats.BBox}
 Assets:{sceneStats.ASSETS}
 Materials:{sceneStats.MATERIALS}
 Geometries:{sceneStats.GEOMS}

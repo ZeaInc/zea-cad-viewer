@@ -14,6 +14,7 @@ import {
 
 const collectSceneStats = (root) => {
   const sceneStats = {
+    BBox: root.boundingBoxParam.value.toString(),
     ASSETS: 0,
     MATERIALS: 0,
     GEOMS: 0,

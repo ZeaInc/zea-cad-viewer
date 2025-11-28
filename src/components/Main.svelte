@@ -34,6 +34,7 @@
     AssetLoadContext,
     CADAsset,
     PMIItem,
+    Xfo,
   } from '@zeainc/zea-engine'
   import { SelectionManager, UndoRedoManager, ToolManager, SelectionTool } from '@zeainc/zea-ux'
 
@@ -74,6 +75,10 @@
     }
     asset.load(url, context).then(() => {
       console.log('Loading CAD File version:', asset.cadfileVersion, ' exported using SDK:', asset.sdk)
+
+      const bbox = asset.boundingBoxParam.value
+      asset.localXfoParam.value = new Xfo(bbox.center())
+
       renderer.frameAll()
     })
     $assets.addChild(asset)
