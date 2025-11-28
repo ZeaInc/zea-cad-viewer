@@ -432,10 +432,10 @@
     fast-png "^6.1.0"
     jpeg-js "^0.4.3"
 
-"@zeainc/zea-engine@4.19.0":
-  version "4.19.0"
-  resolved "https://npm.pkg.github.com/download/@ZeaInc/zea-engine/4.19.0/eaeb9c5862b6cce6c13fdd1ff161f1cba9fdbe29#eaeb9c5862b6cce6c13fdd1ff161f1cba9fdbe29"
-  integrity sha512-ahIpg9mi+EWvsunDo3tp2CChxL45bQcUVylMFPOxk2tvihJ3SsaxJFmnvsbWiFoQagtCwoBSEwvmDM8BODTAfg==
+"@zeainc/zea-engine@4.19.0-3928ad8":
+  version "4.19.0-3928ad8"
+  resolved "https://npm.pkg.github.com/download/@ZeaInc/zea-engine/4.19.0-3928ad8/22d9a56d2710e049d8e7dc232f6eb20afecc9ea0#22d9a56d2710e049d8e7dc232f6eb20afecc9ea0"
+  integrity sha512-MGoWdAa/qllt8Je7w55WUym2BgwzA3q6B7DL1IlP6WtL29RQCiUD1jO4dyM/NKG5i/BYN3ipDST6FCFp8tO4hg==
   dependencies:
     lodash-es "^4.17.21"
 

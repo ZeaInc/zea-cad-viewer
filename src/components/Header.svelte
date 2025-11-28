@@ -211,8 +211,14 @@
   // UX
 
   const handleFrameAll = () => {
-    const { renderer } = $APP_DATA
-    renderer.frameAll()
+    const { renderer, selectionManager } = $APP_DATA
+    // renderer.frameAll()
+    const selection = selectionManager.getSelection()
+    if (selection.size > 0) {
+      renderer.getViewport().frameView(Array.from(selection))
+    } else {
+      renderer.frameAll()
+    }
   }
 
   const handleUndo = () => {
