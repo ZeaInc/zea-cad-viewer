@@ -77,7 +77,7 @@
       console.log('Loading CAD File version:', asset.cadfileVersion, ' exported using SDK:', asset.sdk)
 
       const bbox = asset.boundingBoxParam.value
-      asset.localXfoParam.value = new Xfo(bbox.center())
+      asset.localXfoParam.value = new Xfo(bbox.center().negate())
 
       renderer.frameAll()
     })
