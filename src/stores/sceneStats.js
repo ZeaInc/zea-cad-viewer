@@ -13,8 +13,10 @@ import {
 } from '@zeainc/zea-engine'
 
 const collectSceneStats = (root) => {
+  const bbox = root.boundingBoxParam.value
   const sceneStats = {
-    BBox: root.boundingBoxParam.value.toString(),
+    BBoxP0: bbox.p0.toString(),
+    BBoxP1: bbox.p1.toString(),
     ASSETS: 0,
     MATERIALS: 0,
     GEOMS: 0,
